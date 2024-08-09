@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/sticky-notes.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Notes App</title>
+  </head>
+  <body>
+    <header>
+      <img src="/sticky-notes.png" alt="logo" />
+      <h1>Make your notes easy...</h1>
+    </header>
+    <!-- main lists -->
+    <main>
+      <section></section>
+    </main>
+
+    <!-- other content -->
+    <button onclick="openForm()" class="createBtn">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <section class="form-box">
+      <div class="form">
+        <i class="fa-solid fa-xmark closeForm"></i>
+        <div>
+          <h2>Enter Title</h2>
+          <p id="titleError" style="color: red; display: none">
+            Please enter title
+          </p>
+          <input style="width: 305px" type="text" id="title" />
+        </div>
+        <div>
+          <h2>Enter Note</h2>
+          <p id="noteError" style="color: red; display: none">
+            Please write something here also
+          </p>
+          <textarea name="notes" id="inputNotes" cols="40" rows="15"></textarea>
+        </div>
+        <button onclick="addNoteBox()" id="addNotebtn">Add</button>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
